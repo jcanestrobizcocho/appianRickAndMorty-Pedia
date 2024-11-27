@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432161</versionUuid>
+    <rule>
+        <name>RMP_getPersonajes_recordDataSource</name>
+        <uuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432078</uuid>
+        <description>The Record Data Source for the RMP Personaje Record Type</description>
+        <parentUuid>9cc9aa90-12c0-469c-936c-c5e1593ba342</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>a!localVariables(
+
+  /* Call the integration and store the response in a local variable */
+  local!integrationResponse: #"c65e8e00-427c-4c4d-affe-5d1f99dc22d0"(
+
+    /* The record data source will be executed multiple times, passing sequential values {{1, 2, 3...} for batchNumber until an empty set is returned */
+    /* The batch size is limited to 1000 records per batch */
+    batchNumber: ri!batchNumber
+  ),
+
+  if(
+    /* This will return true if the integration succeeds */
+    local!integrationResponse.success,
+
+    /* If needed, modify the expression below to return a list of maps, dictionaries, or CDTs that map to your record data */
+    local!integrationResponse.result.body.results,
+
+    /* If the integration is unsuccessful, handle accordingly */
+
+    if(
+      /* Note: handling of out of bounds exceptions varies by web service */
+      or(
+        tointeger(index(local!integrationResponse.result, "statusCode", 0)) = 416,
+        local!integrationResponse.result.body.error = "There is nothing here"
+      ),
+      
+
+      /* If this is an out of bounds error, return an empty list to finish syncing */
+      {},
+
+      /* If this is a different error, return the integration error. */
+      /* If you need additional logic to determine the error, use a!integrationError() in the integration to format the error displayed in the sync monitor */
+      local!integrationResponse.error
+    )
+  )
+)</definition>
+        <namedTypedValue>
+            <name>batchNumber</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ec96-9574-8000-9c63-011c48011c48_432161"/>
+    </history>
+</contentHaul>

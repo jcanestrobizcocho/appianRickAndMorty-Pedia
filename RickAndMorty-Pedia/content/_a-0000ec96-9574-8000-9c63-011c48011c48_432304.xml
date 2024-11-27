@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432322</versionUuid>
+    <interface>
+        <name>RMP_dashboardPersonajes</name>
+        <uuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432304</uuid>
+        <description></description>
+        <parentUuid>65922708-07a3-4b13-ac4f-a234ae5c6850</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>{
+  #"SYSTEM_SYSRULES_richTextDisplayField"(
+    label: "",
+    labelPosition: "COLLAPSED",
+    value: {
+      #"SYSTEM_SYSRULES_richTextItem_v1"(
+        text: {
+          "DASHBOARD PERSONAJES"
+        },
+        style: {
+          "STRONG"
+        }
+      )
+    }
+  ),
+  #"SYSTEM_SYSRULES_columnsLayout"(
+    columns: {
+      #"SYSTEM_SYSRULES_columnLayout"(
+        contents: {
+          #"SYSTEM_SYSRULES_pieChartField"(
+            data: #"urn:appian:record-type:v1:09b2420e-0deb-4514-a213-0e9d12c54e83",
+            config: #"SYSTEM_SYSRULES_pieChartConfig"(
+              primaryGrouping: #"SYSTEM_SYSRULES_grouping"(
+                field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/e51e03d0-671d-4d39-beb0-01f1b9a7e25c",
+                alias: "gender_primaryGrouping"
+              ),
+              measures: {
+                #"SYSTEM_SYSRULES_measure"(
+                  function: "COUNT",
+                  field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/aea50733-8d26-4b42-b358-c57491a625ef",
+                  alias: "id_count_measure1"
+                )
+              },
+              dataLimit: 5000
+            ),
+            label: "Genero",
+            labelPosition: "ABOVE",
+            showDataLabels: true,
+            allowImageDownload: true,
+            colorScheme: "RAINFOREST",
+            style: "DONUT",
+            seriesLabelStyle: "ON_CHART",
+            height: "MEDIUM",
+            refreshAfter: "RECORD_ACTION"
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_columnLayout"(
+        contents: {
+          #"SYSTEM_SYSRULES_pieChartField"(
+            data: #"urn:appian:record-type:v1:09b2420e-0deb-4514-a213-0e9d12c54e83",
+            config: #"SYSTEM_SYSRULES_pieChartConfig"(
+              primaryGrouping: #"SYSTEM_SYSRULES_grouping"(
+                field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/b3da8b3d-5b00-48e7-a98d-f605826f0068",
+                alias: "status_primaryGrouping"
+              ),
+              measures: {
+                #"SYSTEM_SYSRULES_measure"(
+                  function: "COUNT",
+                  field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/aea50733-8d26-4b42-b358-c57491a625ef",
+                  alias: "id_count_measure1"
+                )
+              },
+              dataLimit: 5000
+            ),
+            label: "Estado",
+            labelPosition: "ABOVE",
+            showDataLabels: true,
+            allowImageDownload: true,
+            colorScheme: "RAINFOREST",
+            style: "PIE",
+            seriesLabelStyle: "ON_CHART",
+            height: "MEDIUM",
+            refreshAfter: "RECORD_ACTION"
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_columnLayout"(
+        contents: {
+          #"SYSTEM_SYSRULES_barChartField_v1"(
+            data: #"urn:appian:record-type:v1:09b2420e-0deb-4514-a213-0e9d12c54e83",
+            config: #"SYSTEM_SYSRULES_barChartConfig"(
+              primaryGrouping: #"SYSTEM_SYSRULES_grouping"(
+                field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/a985a89d-76cc-4adc-b3a2-cc7b5ce0300b",
+                alias: "species_primaryGrouping"
+              ),
+              measures: {
+                #"SYSTEM_SYSRULES_measure"(
+                  function: "COUNT",
+                  field: #"urn:appian:record-field:v1:09b2420e-0deb-4514-a213-0e9d12c54e83/aea50733-8d26-4b42-b358-c57491a625ef",
+                  alias: "id_count_measure1"
+                )
+              },
+              sort: {},
+              dataLimit: 100
+            ),
+            label: "Bar Chart",
+            labelPosition: "ABOVE",
+            stacking: "NONE",
+            showLegend: true,
+            showTooltips: true,
+            allowImageDownload: true,
+            colorScheme: "RAINFOREST",
+            height: "MEDIUM",
+            xAxisStyle: "STANDARD",
+            yAxisStyle: "STANDARD",
+            refreshAfter: "RECORD_ACTION"
+          )
+        }
+      )
+    }
+  )
+}</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ec96-9574-8000-9c63-011c48011c48_432322"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>d1f1904c-1272-4433-8bf7-9f749b03fa96</versionUuid>
+    <processModelFolder>
+        <name>RMP Process Models</name>
+        <uuid>fd243513-72ca-42f9-b455-c4563b3a2f3f</uuid>
+        <description>Stores process models for the application</description>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users/>
+            <groups>
+                <groupUuid>b34e8187-bf0b-4968-b609-89673b49d32d</groupUuid>
+            </groups>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups>
+                <groupUuid>249df44c-783c-4a6b-9670-1055598f30d1</groupUuid>
+            </groups>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="d1f1904c-1272-4433-8bf7-9f749b03fa96"/>
+    </history>
+</processModelFolderHaul>

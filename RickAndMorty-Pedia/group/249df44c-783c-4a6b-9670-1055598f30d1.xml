@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>249df44c-783c-4a6b-9670-1055598f30d1</versionUuid>
+    <group>
+        <name>RMP Users</name>
+        <securityMap>SECURITYMAP_TEAM</securityMap>
+        <uuid>249df44c-783c-4a6b-9670-1055598f30d1</uuid>
+        <groupTypeUuid>SYSTEM_GROUP_TYPE_CUSTOM</groupTypeUuid>
+        <description>Assigns Viewer permissions to users for objects in the application</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_LOW</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups>
+            <groupUuid>b34e8187-bf0b-4968-b609-89673b49d32d</groupUuid>
+        </groups>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>b34e8187-bf0b-4968-b609-89673b49d32d</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="249df44c-783c-4a6b-9670-1055598f30d1"/>
+    </history>
+</groupHaul>

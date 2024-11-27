@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<connectedSystemHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432072</versionUuid>
+    <connectedSystem>
+        <name>RMP connected system</name>
+        <uuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432066</uuid>
+        <description></description>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <sharedConfigParameters>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <configurationDescriptor xsi:type="xsd:string"/>
+                <url xsi:type="xsd:string"/>
+                <isInheritedUrlOptionSelected xsi:type="xsd:boolean">false</isInheritedUrlOptionSelected>
+                <baseUrl xsi:type="xsd:string">https://rickandmortyapi.com/api</baseUrl>
+                <authType xsi:type="xsd:string">None</authType>
+                <authDetails xsi:type="xsd:string"/>
+            </a:Dictionary>
+        </sharedConfigParameters>
+        <logoChoice></logoChoice>
+        <integrationType>system.http</integrationType>
+    </connectedSystem>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups>
+                <groupUuid>249df44c-783c-4a6b-9670-1055598f30d1</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>b34e8187-bf0b-4968-b609-89673b49d32d</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ec96-9574-8000-9c63-011c48011c48_432072"/>
+    </history>
+</connectedSystemHaul>
