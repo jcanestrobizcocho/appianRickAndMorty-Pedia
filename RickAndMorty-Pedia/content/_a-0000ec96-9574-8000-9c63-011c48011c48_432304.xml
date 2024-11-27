@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432322</versionUuid>
+    <versionUuid>_a-0000ecc3-bc99-8000-9c65-011c48011c48_434362</versionUuid>
     <interface>
         <name>RMP_dashboardPersonajes</name>
         <uuid>_a-0000ec96-9574-8000-9c63-011c48011c48_432304</uuid>
@@ -22,7 +22,7 @@
     value: {
       #"SYSTEM_SYSRULES_richTextItem_v1"(
         text: {
-          "DASHBOARD PERSONAJES"
+          "DASHBOARD PERSONAJES RICK AND MORTY"
         },
         style: {
           "STRONG"
@@ -160,5 +160,6 @@
     </roleMap>
     <history>
         <historyInfo versionUuid="_a-0000ec96-9574-8000-9c63-011c48011c48_432322"/>
+        <historyInfo versionUuid="_a-0000ecc3-bc99-8000-9c65-011c48011c48_434362"/>
     </history>
 </contentHaul>
